@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+   <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_nova_breja"
+            android:icon="@drawable/beermenu512"
+            android:title="Nova Breja" />
+        <item
+            android:id="@+id/nav_minhas_brejas"
+            android:icon="@drawable/listabrejamenu512"
+            android:title="Minhas Brejas" />
+        <item
+            android:id="@+id/nav_novo_usuario"
+            android:icon="@drawable/usermenu512"
+            android:onClick="novoUsuario"
+            android:title="Novo Usuário"/>
+       <item
+           android:id="@+id/nav_sobre"
+           android:icon="@drawable/sobremenu512"
+           android:onClick="abreSobre"
+           android:title="Sobre"/>
+    </group>
+
+
+</menu>

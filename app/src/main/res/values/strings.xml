@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Tomei</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    //menu
+    <string name="menu_cadUsuario">Novo usuário</string>
+
+    <string name="Home">Home</string>
+    <string name="NovaBreja">Nova breja</string>
+    <string name="test">Tomei</string>
+    <string name="test_email">tomei@tomei.com.br</string>
+
+    <string name="NovoUser">Novo Usuário</string>
+    <string name="MinhasBrejas">Minhas Brejas</string>
+    <string name="Sobre">Sobre</string>
+    <string name="Sair">Sair</string>
+
+    //Usuário
+    <string name="hintUsuario">User</string>
+    <string name="hintSenha">Password</string>
+    <string name="hintEntrar">Loggin</string>
+    <string name="hintNovoUser">New User</string>
+
+    <string name="hintNomeBreja">Nome</string>
+    <string name="hintTipo">Tipo</string>
+    <string name="hintFabricante">Fabricante</string>
+
+    <string name="filtroListaBreja">Filtro</string>
+
+    <string name="erroEncontrarBreja">Erro ao buscar breja!</string>
+    <string name="erroEncontrarUser">Usuário não encontrado!</string>
+
+    <string name="deletarBreja">Deletar Breja</string>
+    <string name="msgDeletarBreja">Deseja remover essa breja?</string>
+    <string name="msgDeletarBrejaOk">Breja removida com sucesso</string>
+
+    <string name="erroConexao">Erro de conexão! Está com internet?</string>
+
+    <string name="msgAltBrejaSucess">Breja alterada com sucesso! :)</string>
+    <string name="msgAltBrejaFail">Ohhh shit... deu erro! :(</string>
+
+    <string-array name="tipo_breja">
+        <item>Ale</item>
+        <item>Brow Ale</item>
+        <item>IPA</item>
+        <item>Black IPA</item>
+        <item>Double IPA</item>
+        <item>Imperial IPA</item>
+        <item>Weiss</item>
+        <item>Wit Bier</item>
+        <item>Red Ale</item>
+        <item>Pilsner</item>
+        <item>Lager</item>
+        <item>Outro</item>
+    </string-array>
+
+</resources>
