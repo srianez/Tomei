@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.br.tomei.CadUsuario"
-    tools:showIn="@layout/app_bar_cad_usuario"
+    tools:context="com.br.tomei.CadBreja"
+    tools:showIn="@layout/app_bar_cad_breja"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,61 +14,89 @@
     android:focusableInTouchMode="true">
 
     <LinearLayout
-        android:id="@+id/formCadUsu"
+        android:id="@+id/formCadItem"
         android:layout_width="fill_parent"
-        android:layout_height="463dp"
+        android:layout_height="496dp"
         android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="16dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Usuário"
+            android:textColor="#000000"
             android:textStyle="bold"
-            android:textColor="#000000" />
+            android:textSize="15dp"
+            android:text="Nome"/>
 
         <EditText
-            android:id="@+id/etUsuario"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="0dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Senha"
-            android:textStyle="bold"
-            android:textColor="#000000" />
-
-        <EditText
-            android:id="@+id/etSenha"
+            android:id="@+id/txtNome"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="0dp"
-            android:password="true" />
+            android:textColorLink="@color/colorPrimary" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="E-mail"
+            android:textColor="#000000"
             android:textStyle="bold"
-            android:textColor="#000000" />
+            android:textSize="15dp"
+            android:text="Tipo"/>
+
+        <Spinner
+            android:id="@+id/txtTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:entries="@array/tipo_breja" />
+
+        <!--            <EditText
+                        android:id="@+id/txtTipo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="0dp"
+                        android:textColorLink="@color/colorPrimary" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="Observações"/>
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/txtDescricao"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="0dp" />
+            android:layout_marginRight="0dp"
+            android:ems="10"
+            android:textColorLink="@color/colorPrimary" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="243dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:numStars="5"
+            android:rating="0.0"
+            android:stepSize="1.0" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/floatingActionButton2"
@@ -79,7 +107,7 @@
             android:layout_marginRight="@dimen/fab_margin"
             android:layout_marginVertical="30dp"
             android:clickable="true"
-            android:onClick="salvarUsuario"
+            android:onClick="salvarBreja"
             app:backgroundTint="@color/colorPrimaryDark"
             app:elevation="11dp"
             app:fabSize="normal"
@@ -87,6 +115,21 @@
             app:srcCompat="@android:drawable/ic_menu_save"
             tools:layout_editor_absoluteY="429dp" />
 
+<!--        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginVertical="30dp"
+            android:onClick="salvarBreja"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:elevation="11dp"
+            app:fabSize="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_save"
+            tools:layout_editor_absoluteY="429dp"/>-->
 
     </LinearLayout>
 

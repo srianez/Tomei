@@ -1,12 +1,14 @@
 package com.br.tomei;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -126,11 +128,9 @@ public class CadUsuario extends AppCompatActivity implements NavigationView.OnNa
                 });
     }
 
-    public void novoUsuario(MenuItem item)
+    public void abrirNovoUsuario(MenuItem item)
     {
-        Intent intent = new Intent(CadUsuario.this,
-                CadUsuario.class);
-        this.finish();
+        intent = new Intent(CadUsuario.this, CadUsuario.class);
         startActivity(intent);
     }
 
@@ -157,6 +157,22 @@ public class CadUsuario extends AppCompatActivity implements NavigationView.OnNa
     private void dismissProgress() {
         if(progressDialog != null)
             progressDialog.dismiss();
+    }
+
+    public void fecharApp() {
+        new AlertDialog.Builder(this)
+                .setTitle("Sair do App")
+                .setMessage("Tem certeza que deseja sair do App?")
+                .setPositiveButton("sim",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                finish();
+                                System.exit(0);
+                            }
+                        })
+                .setNegativeButton("não", null)
+                .show();
     }
 
 }

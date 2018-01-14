@@ -37,21 +37,13 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
+            android:name=".CadUsuarioLogin"
+            android:label="Novo Usuário" />
+
+        <activity
             android:name=".SobreActivity"
             android:label="Sobre"
             android:theme="@style/AppTheme.NoActionBar"/>
-
-        <!--        <activity
-             android:name=".ListarBrejas"
-             android:label="Minhas Brejas" />
-
-         <activity
-             android:name=".ManterBreja"
-             android:label="Atualizar Breja"
-             android:parentActivityName=".ManterBreja"
-             android:theme="@style/AppTheme.NoActionBar" />
-
-         <activity android:name=".Sobre"></activity>-->
 
     </application>
 

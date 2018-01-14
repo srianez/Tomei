@@ -38,14 +38,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void goCadUsuario(View v) {
-        Intent proximaTela = new Intent(this, CadUsuario.class);
+        Intent proximaTela = new Intent(this, CadUsuarioLogin.class);
         startActivity(proximaTela);
     }
 
     public void goMain(View v) {
 
         if (verificaCamposObrigatorios()){
-                //escondeTeclado(v);
                 mProgressView.setVisibility(View.VISIBLE);
 
                 BrejaAPI api = getRetrofit().create(BrejaAPI.class);
@@ -77,30 +76,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean verificaCamposObrigatorios()
     {
-        if(etUsuario.getText().toString().length()==0)
-        {
-            etUsuario.setError("Informar o usuário!!");
-            return false;
-        }
-        else if((etSenha.getText().toString().length()==0))
-        {
-            etSenha.setError("Informar a senha!");
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+      return true;
     }
-/*
-    private void escondeTeclado(View v)
-    {
-        if (v != null)
-        {
-            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-        }
-    }*/
 
     private Retrofit getRetrofit()
     {

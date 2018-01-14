@@ -15,13 +15,15 @@
         <item
             android:id="@+id/nav_novo_usuario"
             android:icon="@drawable/usermenu512"
-            android:onClick="novoUsuario"
             android:title="Novo Usuário"/>
        <item
            android:id="@+id/nav_sobre"
            android:icon="@drawable/sobremenu512"
-           android:onClick="abreSobre"
            android:title="Sobre"/>
+       <item
+           android:id="@+id/nav_sair"
+           android:icon="@drawable/sairmenu512"
+           android:title="Sair"/>
     </group>
 
 
